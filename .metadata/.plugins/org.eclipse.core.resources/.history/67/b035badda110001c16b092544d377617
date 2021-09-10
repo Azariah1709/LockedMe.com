@@ -1,0 +1,48 @@
+import java.util.Scanner;
+import java.io.IOException;
+
+public class DisplayText extends FileMethods { 
+	int operator;
+    
+	FileMethods obj = new FileMethods();
+	public void display()throws IOException{
+		Scanner in = new Scanner(System.in);
+		int flag=1;
+		
+			System.out.println(" 1.Enter 1 for file creation: \n 2.Enter 2 to delete a file: \n 3.Enter 3 to search a file: \n 4.Enter 4 to return to Application ");
+			operator = in.nextInt();
+			
+			
+
+
+		      if(operator ==1){
+		    	  obj.create_newfile();
+		        
+		      }
+
+		      
+		      else if(operator ==2){
+		    	  obj.delete_file();
+		        
+		      }
+
+		      else if(operator ==3){
+		    	  obj.search_file();
+		      }
+
+		      
+		      else if (operator ==4){
+		    	
+		        flag=0;
+		      }
+		      else{
+		    	  System.out.println("Invalid OPerator.");
+		      }
+	
+
+		     
+		
+		
+		
+	}
+}

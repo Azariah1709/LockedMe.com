@@ -1,0 +1,49 @@
+import java.io.IOException;
+import java.util.Scanner;
+
+
+public class MainDisplay {
+	public static void main(String args[]) throws IOException{
+		int op;
+		int operator;
+	    
+		FileMethods obj = new FileMethods();
+		Scanner inp = new Scanner(System.in);
+		DisplayText obj1 = new DisplayText();
+		System.out.println("----LockedMe.com----   Developed by: Azariah John K");
+		int k=1;
+		while(k==1){
+			System.out.println(" 1.Enter 1 to Retrieve files in order: \n 2.Enter 2 for business operations: \n 3.Enter 3 to exit the application:");
+			op=inp.nextInt();
+			
+			
+
+
+		      if(op==1){
+		    	  obj1.display_file();
+		       
+		      }
+
+		      
+		      else if(op==2){
+		    	  obj1.display();
+		        
+		      }
+
+		     
+		      else if(op==3){
+		    	  k=0;
+		        
+		      }
+		      else{
+		    	  System.out.println("Invalid Operator.");
+		      }
+		      
+		      
+
+		    
+		}
+		inp.close();
+	}
+
+}
